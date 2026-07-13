@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Bebas Neue", sans-serif;
+  
+  --color-brand-bg: #070101;
+  --color-brand-elevation-1: #110202;
+  --color-brand-elevation-2: #1b0303;
+  --color-brand-accent: #00E600;
+  --color-brand-secondary: #00E6A2;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-bg);
+    font-family: var(--font-sans);
+    color: #f1f5f9;
+  }
+}
+

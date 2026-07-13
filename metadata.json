@@ -1,0 +1,8 @@
+{
+  "name": "Movie Streaming App",
+  "description": "A premium, responsive movie streaming platform featuring filterable catalog, personal watchlists, viewing history, subscription plans, and a complete admin dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

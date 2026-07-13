@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "Movie": {
+      "id": "string",
+      "title": "string",
+      "description": "string",
+      "genre": "string",
+      "releaseYear": "number",
+      "thumbnailUrl": "string",
+      "trailerUrl": "string",
+      "videoUrl": "string",
+      "duration": "string",
+      "rating": "string",
+      "cast": "array",
+      "views": "number",
+      "likes": "number",
+      "isFeatured": "boolean",
+      "createdAt": "string"
+    },
+    "User": {
+      "id": "string",
+      "email": "string",
+      "username": "string",
+      "role": "string",
+      "subscription": {
+        "active": "boolean",
+        "planId": "string",
+        "expiresAt": "string"
+      },
+      "watchlist": "array",
+      "history": "array",
+      "createdAt": "string"
+    }
+  },
+  "firestore": {
+    "movies": {
+      "entity": "Movie",
+      "rules": {
+        "read": "allow read: if true;",
+        "write": "allow write: if isSignedIn() && isAdmin();"
+      }
+    },
+    "users": {
+      "entity": "User",
+      "rules": {
+        "read": "allow read: if isSignedIn() && (request.auth.uid == userId || isAdmin());",
+        "write": "allow write: if isSignedIn() && (request.auth.uid == userId || isAdmin());"
+      }
+    }
+  }
+}
